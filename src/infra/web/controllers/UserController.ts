@@ -11,7 +11,7 @@ class UserController {
   ) {}
 
   async createUser(req: Request, res: Response) {
-    const {  } = req.body as CreateUserDTO;
+    const { name, email } = req.body as CreateUserDTO;
     const user = await this.createUserUseCase.execute(name, email);
     return res.json(user);
   }
