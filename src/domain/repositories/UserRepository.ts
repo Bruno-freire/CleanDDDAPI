@@ -5,4 +5,4 @@ interface UserRepository {
   updateUserProfile(userId: string, name: string, email: string): Promise<User>;
 }
 
-export { UserRepository };
+export type { UserRepository };

@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "CommonJS",
+    "outDir": "./dist", // Diretório de saída para os arquivos transpilados
+    "rootDir": "./src", // Diretório raiz dos arquivos TypeScript
+    "esModuleInterop": true, // Permite interoperabilidade com módulos ES6
+    "skipLibCheck": true, // Pule a verificação das bibliotecas de declaração
+    "resolveJsonModule": true, // Permite a importação de módulos JSON
+    "isolatedModules": true, // Habilita a compilação independente de módulos (pode melhorar o desempenho)
+    "experimentalDecorators": true, // Ativa o suporte a decoradores (necessário para o tsyringe)
+    "emitDecoratorMetadata": true
+  },
+  "include": ["src/**/*.ts"], // Padrão de inclusão dos arquivos TypeScript
+  "exclude": ["node_modules"] // Diretórios a serem excluídos da compilação
+}

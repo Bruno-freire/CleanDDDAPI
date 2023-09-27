@@ -1,3 +1,5 @@
+import 'reflect-metadata'
+import '../../shared/container/index'
 import express from 'express';
 import { userRouter } from './routes/userRoutes';
 
