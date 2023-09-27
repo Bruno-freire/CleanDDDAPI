@@ -9,5 +9,6 @@ const userController = container.resolve(UserController)
 userRouter.get('/users', (req, res) => userController.getUsers(req, res));
 userRouter.post('/users', (req, res) => userController.createUser(req, res));
 userRouter.put('/users/:id', (req, res) => userController.updateUserProfile(req, res));
+userRouter.delete('/users/:id', (req, res) => userController.deleteUser(req, res))
 
 export { userRouter };

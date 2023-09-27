@@ -38,8 +38,14 @@ class UserController {
       }
       return data;
     });
-    console.log(userArray)
+    
     return res.json(updatedUser);
+  }
+
+  async deleteUser(req: Request, res: Response) {
+    const { id } = req.params
+    userArray = userArray.filter(data => data.id !== id)
+    return res.json(userArray)
   }
 }
 
