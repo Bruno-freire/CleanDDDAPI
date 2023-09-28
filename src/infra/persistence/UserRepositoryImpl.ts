@@ -18,14 +18,23 @@ class UserRepositoryImpl implements UserRepository {
     return usersArray
   }
 
-  async updateUserProfile(userId: string, name: string, email: string): Promise<User> {
-    const updatedUser = new User(userId, name, email);
-    return updatedUser;
+  async updateUserProfile(id: string, name: string, email: string): Promise<User> {
+    let user: User
+    usersArray = usersArray.map(data => {
+      if (data.id === id) {
+        data.name = name;
+        data.email = email;
+        user = data
+        return data;
+      }
+      return data;
+    });
+    return user;
   }
 
-  async deleteUser(id: number): Promise<User[]> {
+  async deleteUser(id: string): Promise<User> {
     usersArray = usersArray.filter(data => data.id !== id)
-    return usersArray
+    return 
   }
 }
 
